@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Ahmet Tit",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 27.4, "left": 103.2, "attrs": {} },
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20231005-v1.21.0" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 34.8, "left": -63.4, "attrs": { "color": "red" } },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -87.7, "left": 105.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "led1:A", "pico:GP7", "green", [ "v0" ] ],
+    [ "led1:C", "pico:GND.3", "green", [ "v0" ] ],
+    [ "pot1:SIG", "bb1:4t.a", "green", [ "v0" ] ],
+    [ "bb1:4t.e", "pico:GP26", "green", [ "v0" ] ],
+    [ "pot1:GND", "pico:GND.8", "black", [ "v38.4", "h-48", "v9.6" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
